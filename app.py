@@ -5,11 +5,17 @@ Created on Thu Feb 10 10:41:19 2022
 @author: User
 """
 
+from flask import Flask, render_template, url_for, request
+import pandas as pd 
+import pickle
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.externals import joblib
 
 from flask import Flask
 app=Flask(__name__)
 from flask import request,render_template
-import joblib
+
 
     
     
