@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Theme Prediction</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == "Teaching"%}
+	<h2 style="color:red;">Teaching</h2>
+	{% elif prediction == "Feedback%}
+	<h2 style="color:blue;">"Feedback"</h2>
+	{% elif prediction == "Others%}
+	<h2 style="color:blue;">Others</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
