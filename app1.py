@@ -8,11 +8,10 @@ from sklearn.externals import joblib
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods=['POST'])
 def home():
 	return render_template('home.html')
 
-@app.route('/predict',methods=['POST'])
 def predict_fun():
     NBmodel = open('NBmodel.pkl','rb') #open in read binary
     clf = joblib.load(NBmodel)
